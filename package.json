@@ -1,6 +1,6 @@
 {
   "name": "extended-t3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tic tac toe played on a larger board.",
   "main": "server.js",
   "scripts": {

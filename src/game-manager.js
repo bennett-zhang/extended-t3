@@ -298,20 +298,13 @@ export default class {
   }
 
   /*
-  Returns the move chosen by the AI.
-  */
-  getAIMove() {
-    return this.minimax(this.depth, this.whoseTurn() === "X",
-                        -Infinity, Infinity).move
-  }
-
-  /*
   Minimax algorithm with alpha beta pruning.
 
   @requires
   1 <= depth
   */
-  minimax(depth, isMaximizing, alpha, beta) {
+  minimax(depth = this.depth, isMaximizing = this.whoseTurn() === "X",
+          alpha = -Infinity, beta = Infinity) {
     const moves = this.getSmartLegalMoves()
 
     if (!moves.length || !depth) {

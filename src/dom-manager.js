@@ -128,7 +128,7 @@ export default class {
   makeAIMove() {
     this.thinking = true
 
-    const aiMove = this.gameManager.getAIMove()
+    const aiMove = this.gameManager.minimax().move
 
     if (aiMove) {
       this.makeMove(aiMove)
